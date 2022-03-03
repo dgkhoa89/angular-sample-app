@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+  import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'component-to-view',
@@ -12,6 +12,10 @@ export class ComponentToViewComponent implements OnInit {
   public isMarried: boolean = true;
   public imgWidth : number = 300;
   public isDisable: boolean = true;
+  public tableWidth : number = 400;
+  public tableBorder : number = 1;
+  public isBordered : boolean = true;
+  public isSpecial : boolean = false;
 
   public user : object = {
     name: 'Dever',
@@ -28,7 +32,7 @@ export class ComponentToViewComponent implements OnInit {
   }
 
   // DOES NOT WORK
-  // showInfo(){
-  //   return 'name:${this.user['name']}';
-  // }
+  showInfo(){
+    return 'name:${user.name}';
+  }
 }

@@ -1,24 +1,64 @@
 <h3>component-to-view</h3>
 <p>Full name : {{name}}</p>
 <p>Age: {{age}}</p>
-<p>Is married:  {{isMarried}}</p>
-<p>life status:  {{ isMarried ? 'ended' : 'Awesome'}}</p>
+<p>Is married: {{isMarried}}</p>
+<p>life status: {{ isMarried ? 'ended' : 'Awesome'}}</p>
 <hr>
 
 <!-- does not work -->
 <!-- <p>Full name : {{ user.name }}</p> -->
 
-<!-- <p>info : {{showInfo()}}</p> -->
+<p>info : {{showInfo()}}</p>
 
 <img src="{{imgLink}}" width="200">
 
 
-<!-- property binding -->
+<!-- property binding use []-->
 <img [src]="imgLink" [width]="imgWidth" [alt]="'this is a pink fish picture'">
+<!-- property binding use 'bind-'-->
 <img bind-src="imgLink" [width]="imgWidth" [alt]="'this is a pink fish picture'">
 
 
- <input type="text" name="input" id="inputinput" class="form-control" [value]="name" required="required" pattern="" title="">
+<input type="text" name="input" id="inputinput" class="form-control" [value]="name" required="required" pattern=""
+    title="">
 
 
 <button type="button" class="btn btn-danger" [disabled]="isDisable">Login</button>
+
+<!-- binding atttributes -->
+<table [attr.border]="tableBorder" [attr.width]="tableWidth">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Mary</td>
+        <td>54</td>
+    </tr>
+</table>
+
+<!-- binding class  -->
+<h2>Class binding</h2>
+<table [class.table-bordered]="isBordered" [attr.width]="tableWidth">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Mary</td>
+        <td>54</td>
+    </tr>
+</table>
+
+<!-- style binding -->
+<h2>style binding</h2>
+<div [style.color]="'white'" 
+        [style.font-size.px]="32"
+[style.background]="isSpecial ? 'red':'yellow'">
+
+    Angular 13 lap trinh
+</div>
